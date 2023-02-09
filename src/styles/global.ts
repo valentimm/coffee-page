@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     background: ${props => props.theme['base-background']};
     -webkit-font-smoothing: antialiased;
     font-family: 'Roboto', sans-serif;
+    line-height: 130%;
   }
   h1{
     font-family: 'Baloo 2', cursive;

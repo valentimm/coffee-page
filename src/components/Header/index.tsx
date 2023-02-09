@@ -1,5 +1,5 @@
 import { HeaderContainer } from './styles'
-import { Activity } from 'phosphor-react'
+import { MapPin, ShoppingCart } from 'phosphor-react'
 
 import logo from '../../assets/logo.svg'
 
@@ -10,7 +10,13 @@ export function Header() {
         <img src={logo} alt="" />
       </span>
       <div>
-        <Activity size={24} />
+        <div className='pin'>
+          <MapPin size={20} weight="fill" />
+          <a>Curitiba, PR</a>
+        </div>
+        <div className='cart'>
+        <ShoppingCart size={24} weight="fill" />
+        </div>
       </div>
     </HeaderContainer>
   )
