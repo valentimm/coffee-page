@@ -19,4 +19,15 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 3rem;
     color: ${props => props.theme['base-title']};
   }
+  h2{
+    font-family: 'Roboto', sans-serif;
+    line-height: 130%;
+    font-size: 1.25rem;
+    color: ${props => props.theme['base-subtitle']};
+    font-weight: 400;
+  }
+  a{
+    text-decoration: none;
+    color: ${props => props.theme['base-text']};
+  }
 `
