@@ -31,6 +31,10 @@ export const ProductsContainer = styled.div`
     height: 7.5rem;
     margin-top: -9rem;
   }
+  .product #tags{
+    display: inline-flex;
+    gap: 0.25rem;
+  }
   .product a{
     color: ${props => props.theme['yellow-dark']};
     background-color: ${props => props.theme['yellow-light']};
@@ -39,6 +43,8 @@ export const ProductsContainer = styled.div`
     font-weight: 700;
     padding: 0.25rem 0.5rem;
     line-height: 130%;
+    display: inline-flex;
+    gap: 0.25rem;
   }
   .product h1{
     font-size: 1.25rem;
