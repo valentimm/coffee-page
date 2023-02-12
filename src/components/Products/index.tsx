@@ -19,7 +19,7 @@ import { Coffee, Minus, Package, Plus, ShoppingCart, Timer } from "phosphor-reac
 
 export function Products (){
   return (
-  <ProductsContainer>
+    <ProductsContainer>
     
   <div className="products">
         <h1>Nossos cafés</h1>
