@@ -1,19 +1,19 @@
 import styled from 'styled-components'
 
-export const CheckoutContainer = styled.main`
-  width: 40rem;
+export const CheckoutContainer = styled.div`
   display: flex;
-  flex-flow: column;
-  padding: 2rem 10rem;
+  justify-content: space-between;
   gap: 2rem;
-
+  padding: 2rem 10rem;
+  
  h1 {
     font-size: 1.5rem;
     font-weight: bold;
     color: ${(props) => props.theme['base-subtitle']};
+    padding-bottom: 2rem;
  }
   #locationInfo {
-  width: 40rem;
+  width:40rem;
   height: 23.25rem;
   border-radius: 6px;
   display: block;
@@ -117,10 +117,7 @@ export const PaymentContainer = styled.div`
   border-radius: 6px;
   gap: 2rem;
   padding: 2.5rem;
-  
-  #paymentInfo {
-    display: block;
-  }
+  margin-top: 2rem;
   #pay{
     color: ${(props) => props.theme['purple-dark']};
   }
@@ -152,7 +149,7 @@ export const PaymentContainer = styled.div`
     color: ${(props) => props.theme['purple']};
   }
 `
-export const OrderInfoContainer = styled.div`
+export const OrderInfoContainer = styled.div` 
 display: flex;
 flex-direction: column;
 
@@ -182,5 +179,22 @@ flex-direction: column;
       font-size: 1.25rem;
       font-weight: 700;
     }
+  }
+  #confirmOrder {
+    width: 23rem;
+    height: 2.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: ${(props) => props.theme['white']};
+    background-color: ${(props) => props.theme['yellow']};
+    border: 0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  #confirmOrder:hover {
+    background-color: ${(props) => props.theme['yellow-dark']};
   }
 `

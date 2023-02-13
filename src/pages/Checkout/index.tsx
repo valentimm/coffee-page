@@ -19,6 +19,7 @@ import { ProductInCart } from '../../components/ProductInCart'
 export function Checkout() {
   return (
     <CheckoutContainer>
+      <div id="costumerInfos">
       <h1>Complete seu pedido</h1>
       <div id="locationInfo">
         <FormContainer>
@@ -54,7 +55,7 @@ export function Checkout() {
               <a>O pagamento é feito na entrega. Escolha a forma que deseja pagar</a>
           </label>
           <span>
-            <button>
+            <button >
               <CreditCard id="method" size={16}/>
               Cartão de Crédito
             </button>
@@ -69,23 +70,29 @@ export function Checkout() {
           </span>
         </PaymentContainer>
       </div>
-      <OrderInfoContainer>
-        <h1>Resumo do Pedido</h1>
-        <div id="orderInfo">
-          <ProductInCart />
-          <ProductInCart />
-          <ProductInCart />
-          
-          <div id="total">
-            <p>Total de itens</p>
-            <p>R$ 19,80</p>
-            <p>Entrega</p>
-            <p>R$ 0,00</p>
-            <strong>Total</strong>
-            <strong>R$ 19,80</strong>
-          </div>
-        </div>  
-      </OrderInfoContainer>
+      </div>
+      <div id="orderInfos">
+      <div id="cartContainer">
+        <OrderInfoContainer>
+          <h1>Resumo do Pedido</h1>
+          <div id="orderInfo">
+            <ProductInCart />
+            <ProductInCart />
+            <ProductInCart />
+            
+            <div id="total">
+              <p>Total de itens</p>
+              <p>R$ 19,80</p>
+              <p>Entrega</p>
+              <p>R$ 0,00</p>
+              <strong>Total</strong>
+              <strong>R$ 19,80</strong>
+            </div>
+            <button id="confirmOrder">CONFIRMAR PEDIDO</button>
+          </div>  
+        </OrderInfoContainer>
+      </div>
+      </div>
     </CheckoutContainer>
   )
 }

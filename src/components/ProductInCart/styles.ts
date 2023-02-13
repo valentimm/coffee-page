@@ -3,16 +3,12 @@ import styled from 'styled-components'
 export const CartProduct = styled.div`
   display: flex;
   align-items: center;
-  width: 23rem;
+  width: 2rem;
   height: 5rem;
 #order{
   border-bottom: 1px solid ${(props) => props.theme['base-button']};
-  display: grid;
-  padding-bottom: 1rem;
-}
-#orderContainer{
   display: flex;
-  align-items: center;
+  padding-bottom: 1rem;  
 }
 img {
     width: 4rem;
