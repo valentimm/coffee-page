@@ -1,16 +1,17 @@
 import styled from 'styled-components'
 
-export const MainContainer = styled.div`
+export const CheckoutContainer = styled.main`
+  width: 40rem;
   display: flex;
   flex-direction: column;
-  padding: 4.875rem 10rem;
+  padding: 2rem 10rem;
   gap: 2rem;
  h1 {
     font-size: 1.5rem;
     font-weight: bold;
     color: ${(props) => props.theme['base-subtitle']};
  }
- div {
+  #locationInfo {
   width: 40rem;
   height: 23.25rem;
   border-radius: 6px;
@@ -43,29 +44,31 @@ export const MainContainer = styled.div`
  }
 `
 export const FormContainer = styled.div`
-  
   font-size: 1.125rem;
   font-weight: bold;
   flex-wrap: wrap;
 `
 const BaseInput = styled.input`
+
   background: ${(props) => props.theme['base-input']};
   height: 2.625rem;
   border: 0;
-  font-weight: bold;
-  font-size: 1.125rem;
+  font-weight: 400;
+  font-size: 0.875rem;
   padding: 0.5rem 0.5rem;
   border-radius: 0.25rem;
   color: ${(props) => props.theme['base-text']};
-  &:focus {
+  -webkit-appearance: none;
+&:focus {
     box-shadow: none;
-    border-color: ${(props) => props.theme['yellow-dark']};
+    outline: 1px solid ${(props) => props.theme['yellow-dark']};
   }
   &::placeholder {
     color: ${(props) => props.theme['base-label']};
     font-weight: 400;
     font-size: 0.875rem;
   }
+
 `
 export const CEPInput = styled(BaseInput)`
   width: 12.5rem;
@@ -107,12 +110,15 @@ export const UFInput = styled(BaseInput)`
 export const PaymentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 4.875rem 10rem;
+  background-color: ${(props) => props.theme['base-card']};
+  width: 40rem;
+  height: 13rem;
+  border-radius: 6px;
   gap: 2rem;
+  padding: 2.5rem;
   
-  div {
-    height: 13rem;
-    border-radius: 9999px;
+  #paymentInfo {
+    display: block;
   }
   #pay{
     color: ${(props) => props.theme['purple-dark']};
@@ -120,7 +126,6 @@ export const PaymentContainer = styled.div`
   label{
     padding-bottom: 1rem;
   }
-
   button {
     width: 11.125rem;
     height: 3.1875rem;
@@ -128,17 +133,33 @@ export const PaymentContainer = styled.div`
     align-items: center;
     justify-content: flex-start;
     border-radius: 6px;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     gap: 0.5rem;
     background-color: ${(props) => props.theme['base-button']};
     border: 0;
     color: ${(props) => props.theme['base-subtitle']};
-    ::hover {
-      background-color: ${(props) => props.theme['purple-dark']};
-    }
   }
+    button:hover {
+      background-color: ${(props) => props.theme['base-hover']};
+    }
+    button:active {
+      background-color: ${(props) => props.theme['purple-light']};
+      outline: 1px solid ${(props) => props.theme['purple']};
+    }
   #method {
     display: flex;
     color: ${(props) => props.theme['purple']};
   }
+`
+export const OrderInfoContainer = styled.div`
+  #orderInfo {
+    display: flex;
+    flex-direction: column;
+    background-color: ${(props) => props.theme['base-card']};
+    width: 28rem;
+    height: 31rem;
+    border-radius: 6px 36px;
+    padding: 2.5rem;
+    }
+ 
 `

@@ -19,6 +19,9 @@ export const HeaderContainer = styled.header`
     gap: 0.25rem;
     color: ${props => props.theme['purple']};
   }
+  .cart:hover{
+    background-color: ${props => props.theme['yellow']};
+  }
   .cart {
     color: ${props => props.theme['yellow-dark']};
     background-color: ${props => props.theme['yellow-light']};
