@@ -71,7 +71,20 @@ export function Checkout() {
       </div>
       <OrderInfoContainer>
         <h1>Resumo do Pedido</h1>
+        <div id="orderInfo">
           <ProductInCart />
+          <ProductInCart />
+          <ProductInCart />
+          
+          <div id="total">
+            <p>Total de itens</p>
+            <p>R$ 19,80</p>
+            <p>Entrega</p>
+            <p>R$ 0,00</p>
+            <strong>Total</strong>
+            <strong>R$ 19,80</strong>
+          </div>
+        </div>  
       </OrderInfoContainer>
     </CheckoutContainer>
   )

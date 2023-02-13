@@ -1,10 +1,20 @@
 import styled from 'styled-components'
 
 export const CartProduct = styled.div`
-#order {
   display: flex;
   align-items: center;
-  img {
+  width: 23rem;
+  height: 5rem;
+#order{
+  border-bottom: 1px solid ${(props) => props.theme['base-button']};
+  display: grid;
+  padding-bottom: 1rem;
+}
+#orderContainer{
+  display: flex;
+  align-items: center;
+}
+img {
     width: 4rem;
     height: 4rem;
   }
@@ -14,7 +24,7 @@ export const CartProduct = styled.div`
     font-weight: 400;
     color: ${(props) => props.theme['base-subtitle']};
   }
-  a {
+a {
     padding-top: 0.5rem;
     text-decoration: none;
     font-size: 1rem;
@@ -49,15 +59,11 @@ button {
 }
 button:hover {
     background-color: ${(props) => props.theme['base-hover']};
+    cursor: pointer;
 }
 .increaseDecrease:hover {
     cursor: pointer;
     background-color: ${(props) => props.theme['base-hover']};
     border-radius: 9999px;
-}
-#separator {
-  border-bottom: 1px solid black;
-  width: 100px;
-}
 }
 `

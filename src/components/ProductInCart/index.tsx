@@ -6,8 +6,8 @@ import { CartProduct } from "./styles";
 export function ProductInCart (){
     return (
       <CartProduct>
-        <div id="orderInfo">
-          <span id="order">
+        <div id="order">
+          <span id="orderContainer">
             <img src={product1}/>
             <div id="orderDescription">
               <h2>Expresso Tradicional</h2>

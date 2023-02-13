@@ -3,9 +3,10 @@ import styled from 'styled-components'
 export const CheckoutContainer = styled.main`
   width: 40rem;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   padding: 2rem 10rem;
   gap: 2rem;
+
  h1 {
     font-size: 1.5rem;
     font-weight: bold;
@@ -152,14 +153,34 @@ export const PaymentContainer = styled.div`
   }
 `
 export const OrderInfoContainer = styled.div`
+display: flex;
+flex-direction: column;
+
   #orderInfo {
     display: flex;
     flex-direction: column;
     background-color: ${(props) => props.theme['base-card']};
     width: 28rem;
-    height: 31rem;
+    min-height: 31rem;
     border-radius: 6px 36px;
     padding: 2.5rem;
+    gap: 1.5rem;
     }
  
+  #total {
+    width: 23rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem 10rem;
+
+    p {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: ${(props) => props.theme['base-text']};
+    }
+    strong {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+  }
 `
