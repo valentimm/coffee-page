@@ -11,12 +11,13 @@ import {
   PaymentContainer, 
   OrderInfoContainer} from './styles'
 
-
-import { Bank, CreditCard, CurrencyDollar, MapPinLine,Money } from 'phosphor-react'
-import { ProductInCart } from '../../components/ProductInCart'
-
+import { Bank, CreditCard, CurrencyDollar, MapPinLine,Money } from 'phosphor-react';
+import { ProductInCart } from '../../components/ProductInCart';
+import { useForm } from 'react-hook-form';
 
 export function Checkout() {
+
+const { register } = useForm();
   return (
     <CheckoutContainer>
       <div id="costumerInfos">
@@ -31,16 +32,52 @@ export function Checkout() {
             <a>Informe o endereço onde deseja receber seu pedido</a>
           </label>
           <form>
-            <CEPInput type="text" placeholder="CEP" />
-            <AddressInput type="text" placeholder="Endereço" />
+            <CEPInput 
+              id="cep"
+              type="number" 
+              placeholder="CEP"
+              {...register("cep")}
+                       
+              />
+            <AddressInput  
+              id='address' 
+              type="text"
+              placeholder="Endereço" 
+              {...register("address")}              
+              />
             <span>
-              <NumberInput type="text" placeholder="Número" />
-              <ComplementInput type="text" placeholder="Complemento" />
+              <NumberInput  
+                id="number"
+                type="number"
+                placeholder="Número" 
+                {...register("number")}                
+                />
+              <ComplementInput
+                id="complement"
+                type="text"
+                placeholder="Complemento" 
+                {...register("complement")}              
+                />
             </span>
             <span>
-              <NeighborInput type="text" placeholder="Bairro" />
-              <CityInput type="text" placeholder="Cidade" />
-              <UFInput type="text" placeholder="UF" />
+              <NeighborInput  
+                id='neighbor'
+                type="text"
+                placeholder="Bairro" 
+                {...register("neighbor")}               
+                />
+              <CityInput  
+                id='city'
+                type="text"
+                placeholder="Cidade" 
+                {...register("city")}                
+                />
+              <UFInput  
+                id='uf'
+                type="text"
+                placeholder="UF" 
+                {...register("uf")}                
+                />
             </span>
           </form>
         </FormContainer>

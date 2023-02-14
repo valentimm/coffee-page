@@ -1,4 +1,5 @@
 import { ProductsContainer } from "./styles";
+import { useState } from 'react';
 
 import americano from '../../assets/Americano.png';
 import árabe from '../../assets/Árabe.png';
@@ -15,13 +16,31 @@ import latte from '../../assets/Latte.png';
 import macchiato from '../../assets/Macchiato.png';
 import mocha from '../../assets/Mochaccino.png';
 
-import { Coffee, Minus, Package, Plus, ShoppingCart, Timer } from "phosphor-react";
+import { Minus, Plus, ShoppingCart } from "phosphor-react";
+
+
 
 export function Products (){
+const [products, setProducts] = useState(0);
+
+function handleAddProduct(){
+    setProducts((state) => {
+      return state + 1;
+    });
+  }
+function handleRemoveProduct(){
+    setProducts((state) => {
+      return state - 1;
+    });
+  }
+const watch = (products)
+const productsNull = (products === 0)
+
+
   return (
     <ProductsContainer>
     
-  <div className="products">
+        <div className="products">
         <h1>Nossos cafés</h1>
         <div className="productsList">
           <div className="product">
@@ -33,10 +52,12 @@ export function Products (){
               <p>O tradicional café feito com água quente e grãos moídos</p>
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
-                <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
-                  1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                <span onClick={handleRemoveProduct}>
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
+                </span>
+                  {products}
+                <span onClick={handleAddProduct}  >
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />
@@ -52,10 +73,12 @@ export function Products (){
               <p>Expresso diluído, menos intenso que o tradicional</p>
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
-                <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
-                  1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                <span onClick={handleRemoveProduct}>
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
+                </span>
+                  {products}
+                <span onClick={handleAddProduct}  >
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />
@@ -71,10 +94,12 @@ export function Products (){
               <p>Café expresso tradicional com espuma cremosa</p>
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
-                <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
-                  1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                <span onClick={handleRemoveProduct}>
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
+                </span>
+                  {products}
+                <span onClick={handleAddProduct}  >
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />
@@ -91,10 +116,12 @@ export function Products (){
               <p>Bebida preparada com café expresso e cubos de gelo</p>
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
-                <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
-                  1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                <span onClick={handleRemoveProduct}>
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
+                </span>
+                  {products}
+                <span onClick={handleAddProduct}  >
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />
@@ -111,10 +138,12 @@ export function Products (){
               <p>Meio a meio de expresso tradicional com leite vaporizado</p>
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
-                <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
-                  1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                <span onClick={handleRemoveProduct}>
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
+                </span>
+                  {products}
+                <span onClick={handleAddProduct}  >
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />
@@ -132,9 +161,9 @@ export function Products (){
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
                 <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
                   1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />
@@ -152,9 +181,9 @@ export function Products (){
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
                 <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
                   1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />
@@ -172,9 +201,9 @@ export function Products (){
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
                 <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
                   1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />
@@ -192,9 +221,9 @@ export function Products (){
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
                 <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
                   1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />
@@ -212,9 +241,9 @@ export function Products (){
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
                 <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
                   1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />
@@ -233,9 +262,9 @@ export function Products (){
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
                 <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
                   1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />
@@ -252,9 +281,9 @@ export function Products (){
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
                 <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
                   1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />
@@ -271,9 +300,9 @@ export function Products (){
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
                 <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
                   1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />
@@ -291,9 +320,9 @@ export function Products (){
             <div className="buy">
               <h2>R$ <strong>9,90</strong></h2>
                 <span>
-                  <Minus size={16} weight="fill" color="#8047F8" />
+                  <Minus size={16} weight="fill" color="#8047F8" className="addRemove" />
                   1
-                  <Plus size={16} weight="fill" color="#8047F8" />
+                  <Plus size={16} weight="fill" color="#8047F8" className="addRemove" />
                 </span>
               <button>
                 <ShoppingCart size={24} weight="fill" color="#ffffff" />

@@ -94,4 +94,13 @@ export const ProductsContainer = styled.div`
     justify-content: center;
     border: none;
 }
+.buy button:hover{ 
+    background-color: ${props => props.theme['purple']};
+    cursor: pointer;
+}
+.addRemove:hover {
+    cursor: pointer;
+    background-color: ${(props) => props.theme['base-hover']};
+    border-radius: 9999px;
+}
 `

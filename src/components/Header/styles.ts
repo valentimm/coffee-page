@@ -21,6 +21,7 @@ export const HeaderContainer = styled.header`
   }
   .cart:hover{
     background-color: ${props => props.theme['yellow']};
+    cursor: pointer;
   }
   .cart {
     color: ${props => props.theme['yellow-dark']};
