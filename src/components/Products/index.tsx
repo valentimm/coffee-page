@@ -1,5 +1,5 @@
 import { ProductsContainer } from "./styles";
-import { useState } from 'react';
+import { createContext, useState, useContext } from 'react';
 
 import americano from '../../assets/Americano.png';
 import árabe from '../../assets/Árabe.png';
@@ -18,7 +18,13 @@ import mocha from '../../assets/Mochaccino.png';
 
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
 
+interface ProductsContextData {
+  products: number;
+  handleAddProduct: () => void;
+  handleRemoveProduct: () => void;
+}
 
+export const ProductsContext = createContext({} as ProductsContextData);
 
 export function Products (){
 const [products, setProducts] = useState(0);
@@ -33,11 +39,10 @@ function handleRemoveProduct(){
       return state - 1;
     });
   }
-const watch = (products)
-const productsNull = (products === 0)
 
 
   return (
+    <ProductsContext.Provider value={{ products, handleAddProduct, handleRemoveProduct }}>
     <ProductsContainer>
     
         <div className="products">
@@ -332,5 +337,6 @@ const productsNull = (products === 0)
         </div>
       </div>
   </ProductsContainer>
+  </ ProductsContext.Provider>
   )
 }
