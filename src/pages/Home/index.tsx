@@ -4,6 +4,15 @@ import banner from '../../assets/banner.png';
 
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
 import { Products } from "../../components/Products";
+import { createContext } from "react";
+
+interface ProductsContextData {
+  products: number;
+  //handleAddProduct: () => void;
+  //handleRemoveProduct: () => void;
+}
+
+export const ProductsContext = createContext({} as ProductsContextData);
 
 export function Home (){
   return (

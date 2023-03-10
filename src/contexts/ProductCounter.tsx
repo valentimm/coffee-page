@@ -1,7 +1,8 @@
 import { createContext, useState } from "react";
+import { ProductsType } from "../components/Products";
 
 interface ProductsContextData {
-  products: number;
+  products: ProductsType;
   handleAddProduct: () => void;
   handleRemoveProduct: () => void;
 }
