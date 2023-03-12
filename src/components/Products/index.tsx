@@ -43,6 +43,27 @@ export function Products() {
       price: 9.9,
       image: expresso,
     },
+    {
+      id: 3,
+      name: "Expresso outro",
+      description: "O tradicional café feito com água quente e grãos moídos",
+      price: 9.9,
+      image: expresso,
+    },
+    {
+      id: 4,
+      name: "Expresso outro",
+      description: "O tradicional café feito com água quente e grãos moídos",
+      price: 9.9,
+      image: expresso,
+    },
+    {
+      id: 5,
+      name: "Expresso outro",
+      description: "O tradicional café feito com água quente e grãos moídos",
+      price: 9.9,
+      image: expresso,
+    },
   ];
   const [products, setProducts] = useState(initialProducts);
 
