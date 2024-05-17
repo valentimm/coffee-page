@@ -12,7 +12,7 @@ export const ProductsContainer = styled.div`
   }
   .productsList{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 5rem 11rem;
   }
   .product{
@@ -42,12 +42,14 @@ export const ProductsContainer = styled.div`
     font-size: 0.625rem;
     font-weight: 700;
     padding: 0.25rem 0.5rem;
+    margin-top: 0.5rem;
     line-height: 130%;
     display: inline-flex;
     gap: 0.25rem;
   }
   .product h1{
     font-size: 1.25rem;
+    margin-top: 0.5rem;
   }
   .product p{
     font-size: 0.875rem;
@@ -94,7 +96,7 @@ export const ProductsContainer = styled.div`
     justify-content: center;
     border: none;
 }
-.buy button:hover{ 
+.buy button:hover{
     background-color: ${props => props.theme['purple']};
     cursor: pointer;
 }
